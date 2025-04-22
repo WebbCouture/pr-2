@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     /*Generics styles*/
-    color: rgb(83, 0, 63);
+    color: rgb(255, 252, 254);
     font-family: 'Lato', sans-serif;
     max-width: 2500px;
     margin-right: auto;
@@ -51,7 +51,7 @@ header {
     /*White*/
     padding: 0 1rem;
     /*Padding on the sides*/
-    position: fixed;
+    position: top;
     /*Fixed position*/
     z-index: 99;
     /*Z-index*/
@@ -147,6 +147,7 @@ ul {list-style: square;}
     width: 100%;
     background: url("../images/headersky.png") no-repeat center center/cover;
     position: relative;
+
 }
 
 #cover-text {
@@ -156,7 +157,7 @@ ul {list-style: square;}
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: none;
-    color: #ffffff;
+    color: rgb(192, 33, 152);
     padding: 1rem;
     text-align: center;
     border-radius: 8px;
@@ -165,7 +166,7 @@ ul {list-style: square;}
 
 #cover-text>h2,
 #cover-text>h3 {
-    color: #FFFFFF;
+    color: #4F76ACff;
 }
 
 /* Reasons section */
@@ -371,7 +372,7 @@ footer > h5 {
     main {
         /* Push main content down to accommodate larger header */
         flex: 1 0 auto;
-        margin-top: 47px;
+        margin-top: 0px;
     }
 
     /* Pink section */
