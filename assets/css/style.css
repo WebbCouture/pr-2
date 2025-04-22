@@ -1,35 +1,420 @@
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/*Asterisk wildcard selector*/
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
-/* Header Styles */
+/* Styles in general */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*Generics styles*/
+    color: rgb(83, 0, 63);
+    font-family: 'Lato', sans-serif;
+    max-width: 2500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0 1rem;
+    letter-spacing: 2px;
+    color: #52004B;
+    margin-top: 25px;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0 3rem;
+    letter-spacing: 2px;
+    color: #7e0073;
+    margin-top: 50px;
+}
+
+h4 {
+    font-family: 'Oswald', sans-serif ;
+    font-size: 0 1rem;
+    letter-spacing: 2px;
+    color: #52004B;
+    margin-top: 25px;
+}
+
+/*Header*/
 header {
-    
-    background-color: #35424a;
+    background-color: #FFFFFF;
+    /*White*/
+    padding: 0 1rem;
+    /*Padding on the sides*/
+    position: fixed;
+    /*Fixed position*/
+    z-index: 99;
+    /*Z-index*/
+    width: 100%;
+    /*Full width*/
+    box-shadow: 0 2px 2px #3A3A3A;
+    /*Shadow*/
+    display: flex;
+    /*Flexbox*/
+    justify-content: space-between;
+    /*Space between*/
+    align-items: baseline;
+    /*Align items*/
+    max-width: 2500px;
     color: #ffffff;
-    padding: 20px 0;
     text-align: center;
+    
 }
 
-/* Media size */
-@media (max-width: 320px) {
-    .game-area {
-        height: 70vh;
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
+#menu>li {
+    margin-bottom: 1em;
+}
+
+.active {
+    border-bottom: 1px solid #3A3A3A;
+}
+
+.button {
+    color: #000000;
+    background-color: #d628b9;
+    padding: 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0.3125rem 0.625rem #202020;
+    margin-top: 1.875rem;
+}
+
+.button:hover {
+    background-color: var(#000000);
+}
+
+/*Nav styles dropdown*/
+nav {
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #272727;
+    display: none;
+    top: 100%;
+}
+
+/* Nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+/*Main*/
+main {
+    flex: 1 0 auto;
+    margin-top: 47px;
+}
+
+ul {list-style: square;}
+
+/* Pink section */
+#pink {
+    height: 600px;
+    width: 100%;
+    background: url("../images/headersky.png") no-repeat center center/cover;
+    position: relative;
+}
+
+#cover-text {
+    /* Final rgba value sets the opacity to semi-transparent */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(83, 0, 63, 0.7);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 90%;
+}
+
+#cover-text>h2,
+#cover-text>h3 {
+    color: #FFFFFF;
+}
+
+/* Reasons section */
+#reasons {
+    width: 90%;
+    margin: 20px auto;
+}
+
+#reasons h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 280%;
+}
+
+#info {
+    width: 90%;
+    margin: 20px auto;
+}
+
+#benefits-physical>div,
+#benefits-mental>div {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#benefits hr {
+    border-top: 1px solid #3A3A3A;
+    margin: 5px 0;
+}
+
+.info-page {
+    background-color: #C591C2;
+}
+
+.contact-page {
+    background-color: #C591C2;
+}
+
+.index-page {
+    background-color: #C591C2;
+}
+
+.info-page section ul {
+    margin-left: 2rem; 
+}
+
+/* Contact form stacked layout */
+.stacked-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem 0 2rem 1rem;
+    /* Top, right, bottom, left */
+    padding: 1rem;
+}
+
+/* Move contact form section lower */
+.contact-page .contact-section {
+    margin-top: 5rem;
+    /* You can increase this for more space */
+}
+
+.contact-page h2 {
+    padding-left: 2rem;
+}
+
+.stacked-form label {
+    font-weight: bold;
+}
+
+.stacked-form input,
+.stacked-form textarea,
+.stacked-form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.stacked-form button {
+    background-color: #50004B;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.stacked-form button:hover {
+    background-color: #81044D;
+}
+
+#confirmation-message {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding-left: 50px;
+    font-size: 1.1rem;
+    display: none;
+    margin-top: 1rem;
+}
+
+/*Footer*/
+footer {
+    background-color: #FFFFFF;
+}
+
+footer > h5 {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #C591C2;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #81044D;
+}
+
+/* Info Page Styling */
+.info-page main {
+    padding: 0rem 1rem;
+}
+
+.info-page section {
+    margin-top: 0rem;
+/* Lower value moves text up */
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin: 0 0.5rem;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    padding-left: 0rem;
+}
+
+/* Paragraph font only for info page */
+.info-page p {
+    font-family: Georgia, serif;
+}
+
+/* Smaller, responsive banner for info page */
+.info-banner {
+    margin-top: 7rem;
+    /* Push image lower */
+    padding-left: 1.5rem;
+    /* Optional spacing from the left edge */
+}
+
+.info-banner img {
+    width: 100%;
+    /* Smaller image */
+    max-width: 600px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
     }
 
-    .controls-area {
-        width: 75%;
-        margin: 10px auto;
+    #menu {
+        display: flex;
     }
 
-    .btn--big {
-        margin: 10px 10px;
+    #menu>li {
+        padding-left: 1rem;
     }
-    .question-area {
-        padding: 10px 0;
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    main {
+        /* Push main content down to accommodate larger header */
+        flex: 1 0 auto;
+        margin-top: 47px;
+    }
+
+    /* Pink section */
+    #cover-text {
+        width: 300px;
+        right: 50px;
+    }
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #menu a:hover {
+        border-bottom: 1px solid #3A3A3A;
+    }
+
+    /* Media query: small phones (iPhone 5 and up) */
+    @media screen and (max-width: 374px) {
+        header {
+            padding: 0 0.5rem;
+        }
+
+        #logo {
+            font-size: 1.8rem;
+        }
+
+        #cover-text {
+            font-size: 1rem;
+            padding: 0.8rem;
+        }
+
+        .stacked-form {
+            margin: 1rem;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .info-banner img {
+            width: 100%;
+        }
+
+        #pink {
+            height: 300px;
+            width: 100%;
+        }
     }
 }
