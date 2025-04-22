@@ -202,15 +202,15 @@ ul {list-style: square;}
 }
 
 .info-page {
-    background-color: #C591C2;
+    background-color:  #4F76ACff;
 }
 
 .contact-page {
-    background-color: #C591C2;
+    background-color: #4F76ACff;
 }
 
 .index-page {
-    background-color: #C591C2;
+    background-color: rgba(220, 236, 254, 1);
 }
 
 .info-page section ul {
@@ -281,7 +281,7 @@ footer > h5 {
     margin-top: 0px;
     padding-top: 15px;
     padding-bottom: 15px;
-    background: #C591C2;
+    background: #272727;
     color: white;
     font-size: 1.1rem;
     font-weight: bold;
@@ -296,7 +296,7 @@ footer > h5 {
 }
 
 #social-networks i {
-    font-size: 160%;
+    font-size: 200%;
     padding: 5%;
     color: #405174ff;
 }
