@@ -25,7 +25,7 @@ h1, h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 0 1rem;
     letter-spacing: 2px;
-    color: #52004B;
+    color: #595F49ff;
     margin-top: 25px;
 }
 
@@ -33,7 +33,7 @@ h3 {
     font-family: 'Oswald', sans-serif;
     font-size: 0 3rem;
     letter-spacing: 2px;
-    color: #7e0073;
+    color: #405174ff;
     margin-top: 50px;
 }
 
@@ -41,7 +41,7 @@ h4 {
     font-family: 'Oswald', sans-serif ;
     font-size: 0 1rem;
     letter-spacing: 2px;
-    color: #52004B;
+    color: #405174ff;
     margin-top: 25px;
 }
 
@@ -57,7 +57,7 @@ header {
     /*Z-index*/
     width: 100%;
     /*Full width*/
-    box-shadow: 0 2px 2px #3A3A3A;
+    box-shadow: 0 2px 2px #405174ff;
     /*Shadow*/
     display: flex;
     /*Flexbox*/
@@ -92,7 +92,7 @@ header a {
 
 .button {
     color: #000000;
-    background-color: #d628b9;
+    background-color: #ffffff;
     padding: 1.25rem;
     text-align: center;
     text-decoration: none;
@@ -141,9 +141,9 @@ main {
 
 ul {list-style: square;}
 
-/* Pink section */
-#pink {
-    height: 600px;
+/* mainbox */
+#mainbox {
+    height: 750px;
     width: 100%;
     background: url("../images/headersky.png") no-repeat center center/cover;
     position: relative;
@@ -155,8 +155,8 @@ ul {list-style: square;}
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(83, 0, 63, 0.7);
-    color: #fff;
+    background-color: none;
+    color: #ffffff;
     padding: 1rem;
     text-align: center;
     border-radius: 8px;
