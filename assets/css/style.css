@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     /*Generics styles*/
-    color: rgb(255, 252, 254);
+    color: rgb(5, 34, 5);
     font-family: 'Lato', sans-serif;
     max-width: 2500px;
     margin-right: auto;
@@ -26,7 +26,7 @@ h1, h2 {
     font-size: 0 1rem;
     letter-spacing: 2px;
     color: #595F49ff;
-    margin-top: 25px;
+    margin-top: -70px;
 }
 
 h3 {
@@ -383,6 +383,7 @@ footer > h5 {
         right: 50px;
     }
 }
+
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
