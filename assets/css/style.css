@@ -181,64 +181,7 @@ ul {list-style: square;}
     font-size: 280%;
 }
 
-/ Reset & base typography /
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  background: #f3f4f6;
-  color: #111827;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-
-/ Card /
-.question-box {
-  background: #ffffff;
-  max-width: 380px;
-  width: 100%;
-  padding: 1.75rem 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-/ Individual question /
-.question {
-  margin-bottom: 1.5rem;
-}
-
-.question h3 {
-  font-size: 1rem;
-  margin-bottom: 0.75rem;
-  font-weight: 600;
-}
-
-/ Options /
-.options label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-  user-select: none;
-}
-
-.options input[type="radio"] {
-  accent-color: #1d4ed8; / blue accent /
-  transform: scale(1.15);
-}
-
-/ Highlight chosen option text /
-.options input[type="radio"]:checked + span {
-  font-weight: 600;
-}
 
 #info {
     width: 90%;
